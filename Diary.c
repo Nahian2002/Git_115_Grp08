@@ -9,7 +9,7 @@ void searchEntry()
 int main()
 {
     int choice;
-     while (1) {
+    
         printf("\n--- Personal Diary Menu ---\n");
         printf("1. Add Entry\n");
         printf("2. View Entries\n");
