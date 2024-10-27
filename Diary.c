@@ -1,45 +1,47 @@
 #include<stdio.h>
 
-#define MaxEntries 1000
-#define MaxCharacter 100
-
-char diary[MaxEntries][MaxCharacter];
-
-void EncryptEntry(int index);
-void DecryptEntry(int index);
+void addEntry() 
+void viewEntries()
+void editEntry()
+void deleteEntries()
+void searchEntry()
 
 int main()
 {
+    int choice;
+     while (1) {
+        printf("\n--- Personal Diary Menu ---\n");
+        printf("1. Add Entry\n");
+        printf("2. View Entries\n");
+        printf("3. Edit Entries\n");
+        printf("4. Delete All Entries\n");
+        printf("5. Search Entry\n");
+        printf("6. Exit\n");
+        printf("Enter your choice: ");
+        scanf("%d", &choice);
 
+        switch (choice) {
+            case 1:
+                addEntry();
+                break;
+            case 2:
+                viewEntries();
+                break;
+            case 3:
+                editEntry();
+                break;
+            case 4:
+                deleteEntries();
+                break;
+            case 5:
+                searchEntry();
+                break;
+            case 6:
+                printf("Exiting...\n");
+                break;
+            default:
+                printf("Invalid choice! Try again.\n");
+        }
     return 0;
-}
-
-void EncryptEntry(int index)
-{
-    for(int i=0;i<MaxCharacter;i++)
-    {
-        if(diary[index][i]!='\0')
-        {
-            diary[index][i]=diary[index][i]+2;
-        }
-        else
-        {
-            break;
-        }
-    }
-}
-
-void DecryptEntry(int index)
-{
-    for(int i=0;i<MaxCharacter;i++)
-    {
-        if(diary[index][i]!='\0')
-        {
-            diary[index][i]=diary[index][i]-2;
-        }
-        else
-        {
-            break;
-        }
-    }
-}
+ 
+ }
